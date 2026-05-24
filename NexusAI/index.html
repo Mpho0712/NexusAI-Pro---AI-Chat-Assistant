@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NexusAI Pro — Advanced Intelligence Platform</title>
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-brand">
+                <div class="nav-logo">
+                    <i class="fa-solid fa-cube"></i>
+                    <div class="nav-logo-glow"></div>
+                </div>
+                <span class="nav-name">NexusAI <span class="nav-pro">Pro</span></span>
+            </div>
+            <div class="nav-links">
+                <a href="#features" class="nav-link">Features</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#pricing" class="nav-link">Pricing</a>
+                <a href="chat.html" class="nav-cta">Launch App <i class="fa-solid fa-arrow-right"></i></a>
+            </div>
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="#features" class="mobile-link">Features</a>
+        <a href="#about" class="mobile-link">About</a>
+        <a href="#pricing" class="mobile-link">Pricing</a>
+        <a href="chat.html" class="mobile-cta">Launch App <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="badge-dot"></span>
+                Powered by Gemini 2.5 Flash
+            </div>
+            <h1 class="hero-title">
+                The Future of
+                <span class="hero-gradient">Intelligent AI</span>
+            </h1>
+            <p class="hero-subtitle">
+                NexusAI Pro delivers lightning-fast, deeply intelligent responses for research, coding, writing, and creative problem-solving. Built for those who demand excellence.
+            </p>
+            <div class="hero-actions">
+                <a href="chat.html" class="hero-primary-btn">
+                    <i class="fa-solid fa-bolt"></i> Try NexusAI Free
+                </a>
+                <a href="#features" class="hero-secondary-btn">
+                    <i class="fa-solid fa-circle-play"></i> See Features
+                </a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat">
+                    <span class="stat-number">1M+</span>
+                    <span class="stat-label">Tokens Context</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">50+</span>
+                    <span class="stat-label">Languages</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat">
+                    <span class="stat-number">99.9%</span>
+                    <span class="stat-label">Uptime</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual">
+            <div class="hero-orb">
+                <div class="orb-main">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <div class="orb-ring or1"></div>
+                <div class="orb-ring or2"></div>
+                <div class="orb-ring or3"></div>
+            </div>
+            <div class="floating-card fc1">
+                <i class="fa-solid fa-code"></i>
+                <span>Code Generation</span>
+            </div>
+            <div class="floating-card fc2">
+                <i class="fa-solid fa-chart-line"></i>
+                <span>Data Analysis</span>
+            </div>
+            <div class="floating-card fc3">
+                <i class="fa-solid fa-globe"></i>
+                <span>Multilingual</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+        <div class="section-header">
+            <h2 class="section-title">Why Choose <span class="hero-gradient">NexusAI</span></h2>
+            <p class="section-subtitle">Engineered for performance, built for intelligence</p>
+        </div>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-rocket"></i>
+                </div>
+                <h3>Lightning Fast</h3>
+                <p>Responses in milliseconds. Stream processing delivers answers as they're generated.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-brain"></i>
+                </div>
+                <h3>Deep Reasoning</h3>
+                <p>Step-by-step analysis for complex problems. Perfect for research and technical work.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-code"></i>
+                </div>
+                <h3>Code Expert</h3>
+                <p>Write, debug, and optimize code in any language with detailed explanations.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-shield-halved"></i>
+                </div>
+                <h3>Secure & Private</h3>
+                <p>Your conversations stay private. Enterprise-grade security built in.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-globe"></i>
+                </div>
+                <h3>Multilingual</h3>
+                <p>Communicate in 50+ languages with native-level fluency and understanding.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">
+                    <i class="fa-solid fa-infinity"></i>
+                </div>
+                <h3>Infinite Context</h3>
+                <p>1 million token context window. Remember entire conversations and documents.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="about-content">
+            <div class="about-text">
+                <h2 class="section-title">Built by <span class="hero-gradient">Mpho</span></h2>
+                <p class="about-desc">
+                    NexusAI Pro was crafted with a singular vision: to make advanced AI accessible, powerful, and beautiful. Every detail — from the particle animations to the streaming responses — was designed with purpose.
+                </p>
+                <div class="about-highlights">
+                    <div class="highlight">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Custom-built interface</span>
+                    </div>
+                    <div class="highlight">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Powered by Google Gemini</span>
+                    </div>
+                    <div class="highlight">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Real-time streaming responses</span>
+                    </div>
+                    <div class="highlight">
+                        <i class="fa-solid fa-check-circle"></i>
+                        <span>Professional dark theme</span>
+                    </div>
+                </div>
+                <a href="chat.html" class="about-cta">
+                    <i class="fa-solid fa-arrow-right"></i> Start Chatting Now
+                </a>
+            </div>
+            <div class="about-visual">
+                <div class="about-card">
+                    <div class="about-card-header">
+                        <span class="ac-dot"></span>
+                        <span class="ac-dot"></span>
+                        <span class="ac-dot"></span>
+                    </div>
+                    <div class="about-card-body">
+                        <div class="ac-message user">
+                            <p>Explain quantum computing</p>
+                        </div>
+                        <div class="ac-message ai">
+                            <p>Quantum computing uses qubits that exist in superposition, allowing them to process multiple states simultaneously...</p>
+                        </div>
+                        <div class="ac-typing">
+                            <span></span><span></span><span></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="section-header">
+            <h2 class="section-title">Simple <span class="hero-gradient">Pricing</span></h2>
+            <p class="section-subtitle">Start free, upgrade when you need more</p>
+        </div>
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Free</h3>
+                    <div class="price">
+                        <span class="amount">$0</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> 20 requests/minute</li>
+                    <li><i class="fa-solid fa-check"></i> 1M token context</li>
+                    <li><i class="fa-solid fa-check"></i> Code generation</li>
+                    <li><i class="fa-solid fa-check"></i> Multilingual support</li>
+                </ul>
+                <a href="chat.html" class="pricing-btn">Get Started</a>
+            </div>
+            <div class="pricing-card popular">
+                <div class="popular-badge">Most Popular</div>
+                <div class="pricing-header">
+                    <h3>Pro</h3>
+                    <div class="price">
+                        <span class="amount">$19</span>
+                        <span class="period">/month</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Unlimited requests</li>
+                    <li><i class="fa-solid fa-check"></i> Priority responses</li>
+                    <li><i class="fa-solid fa-check"></i> Advanced reasoning</li>
+                    <li><i class="fa-solid fa-check"></i> Custom integrations</li>
+                    <li><i class="fa-solid fa-check"></i> 24/7 priority support</li>
+                </ul>
+                <a href="chat.html" class="pricing-btn primary">Coming Soon</a>
+            </div>
+            <div class="pricing-card">
+                <div class="pricing-header">
+                    <h3>Enterprise</h3>
+                    <div class="price">
+                        <span class="amount">Custom</span>
+                    </div>
+                </div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-check"></i> Everything in Pro</li>
+                    <li><i class="fa-solid fa-check"></i> Dedicated servers</li>
+                    <li><i class="fa-solid fa-check"></i> Custom model training</li>
+                    <li><i class="fa-solid fa-check"></i> SLA guarantee</li>
+                </ul>
+                <a href="#" class="pricing-btn">Contact Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <div class="footer-logo">
+                    <i class="fa-solid fa-cube"></i>
+                    <span>NexusAI Pro</span>
+                </div>
+                <p>Advanced AI platform built for the future.</p>
+                <p class="footer-credit">Designed & Developed by <strong>Mpho</strong></p>
+            </div>
+            <div class="footer-links">
+                <div class="footer-col">
+                    <h4>Product</h4>
+                    <a href="chat.html">Chat</a>
+                    <a href="#features">Features</a>
+                    <a href="#pricing">Pricing</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Company</h4>
+                    <a href="#about">About</a>
+                    <a href="#">Blog</a>
+                    <a href="#">Careers</a>
+                </div>
+                <div class="footer-col">
+                    <h4>Legal</h4>
+                    <a href="#">Privacy</a>
+                    <a href="#">Terms</a>
+                    <a href="#">Contact</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 NexusAI Pro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="home.js"></script>
+</body>
+</html>

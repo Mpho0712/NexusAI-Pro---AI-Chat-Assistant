@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <title>NexusAI — Intelligent Assistant</title>
+    <link rel="stylesheet" href="chat.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Particle Background -->
+    <div class="particles-background" id="particlesBg"></div>
+
+    <div class="app-container">
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-header">
+                <div class="brand">
+                    <div class="brand-icon">
+                        <i class="fa-solid fa-cube"></i>
+                        <div class="brand-glow"></div>
+                    </div>
+                    <div class="brand-info">
+                        <span class="brand-name">NexusAI</span>
+                        <span class="brand-by">by Mpho</span>
+                    </div>
+                </div>
+                <button class="new-chat-btn" id="newChatBtn">
+                    <i class="fa-solid fa-plus-circle"></i>
+                    <span>New Conversation</span>
+                </button>
+            </div>
+            
+            <div class="history-section">
+                <p class="history-label">
+                    <i class="fa-solid fa-clock-rotate-left"></i>
+                    Recent Chats
+                </p>
+                <div class="chat-history" id="chatHistory"></div>
+            </div>
+            
+            <div class="sidebar-footer">
+                <div class="model-badge">
+                    <span class="model-dot"></span>
+                    <i class="fa-solid fa-microchip"></i>
+                    <span>Gemini 2.5 Flash</span>
+                </div>
+                <button class="clear-btn" id="clearChatsBtn">
+                    <i class="fa-solid fa-trash-can"></i>
+                    Clear All Chats
+                </button>
+            </div>
+        </aside>
+
+        <!-- Overlay for mobile -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Bar -->
+            <header class="top-bar">
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fa-solid fa-bars-staggered"></i>
+                </button>
+                <div class="status-area">
+                    <div class="status-indicator">
+                        <span class="status-core"></span>
+                        <span class="status-ring"></span>
+                    </div>
+                    <span class="status-text">NexusAI Online</span>
+                </div>
+            </header>
+
+            <!-- Input Area - MOVED TO TOP on mobile -->
+            <div class="input-section" id="inputSection">
+                <div class="input-wrapper">
+                    <textarea 
+                        id="messageInput" 
+                        class="message-input" 
+                        placeholder="Ask NexusAI anything..." 
+                        rows="1"
+                    ></textarea>
+                    <button class="send-button" id="sendBtn" title="Send message">
+                        <i class="fa-solid fa-arrow-up"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Chat Area -->
+            <div class="chat-container" id="chatContainer">
+                <!-- Welcome Screen -->
+                <div class="welcome-screen" id="welcomeScreen">
+                    <div class="welcome-inner">
+                        <div class="hero-icon">
+                            <div class="hex-container">
+                                <div class="hex-shape">
+                                    <i class="fa-solid fa-brain"></i>
+                                </div>
+                                <div class="hex-ring h-ring-1"></div>
+                                <div class="hex-ring h-ring-2"></div>
+                            </div>
+                        </div>
+                        <h1 class="hero-title">NexusAI Assistant</h1>
+                        <p class="hero-subtitle">
+                            Powered by advanced AI. Intelligent, fast, and precise responses for any task.
+                        </p>
+                        
+                        <div class="capability-tags">
+                            <span class="cap-tag"><i class="fa-solid fa-bolt"></i> Fast</span>
+                            <span class="cap-tag"><i class="fa-solid fa-brain"></i> Smart</span>
+                            <span class="cap-tag"><i class="fa-solid fa-shield-halved"></i> Reliable</span>
+                            <span class="cap-tag"><i class="fa-solid fa-globe"></i> Multilingual</span>
+                        </div>
+                        
+                        <div class="suggestion-cards">
+                            <button class="suggestion-card" data-prompt="Explain quantum computing in simple terms with clear examples">
+                                <div class="suggestion-icon">
+                                    <i class="fa-solid fa-atom"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <span class="suggestion-title">Quantum Computing</span>
+                                    <span class="suggestion-desc">Simple explanation with examples</span>
+                                </div>
+                            </button>
+                            <button class="suggestion-card" data-prompt="Write a complete professional business email for a job application">
+                                <div class="suggestion-icon">
+                                    <i class="fa-solid fa-briefcase"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <span class="suggestion-title">Business Email</span>
+                                    <span class="suggestion-desc">Professional job application</span>
+                                </div>
+                            </button>
+                            <button class="suggestion-card" data-prompt="Debug and optimize this Python code with detailed explanation">
+                                <div class="suggestion-icon">
+                                    <i class="fa-solid fa-code"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <span class="suggestion-title">Code Debugging</span>
+                                    <span class="suggestion-desc">Find and fix Python errors</span>
+                                </div>
+                            </button>
+                            <button class="suggestion-card" data-prompt="Create a comprehensive 7-day healthy meal plan with recipes">
+                                <div class="suggestion-icon">
+                                    <i class="fa-solid fa-utensils"></i>
+                                </div>
+                                <div class="suggestion-content">
+                                    <span class="suggestion-title">Meal Planning</span>
+                                    <span class="suggestion-desc">7-day plan with recipes</span>
+                                </div>
+                            </button>
+                        </div>
+                        
+                        <p class="creator-credit">
+                            <i class="fa-solid fa-code"></i> Designed & Built by <strong>Mpho</strong>
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Messages Container -->
+                <div class="messages-container" id="messagesContainer"></div>
+                
+                <!-- Bottom padding for mobile -->
+                <div class="chat-bottom-spacer"></div>
+            </div>
+        </main>
+    </div>
+
+    <script src="chat.js"></script>
+</body>
+</html>
